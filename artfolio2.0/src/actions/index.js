@@ -97,7 +97,7 @@ export const deletePost = (postId) => dispatch => {
 //          }
 //      }
 //     axios
-//     .delete(`https://backend-art.herokuapp.com/api/posts/${postId}`, request)
+//     .delete(`https://backend-art.herokuapp.com/api/admin/posts/${postId}`, request)
 //     .then(res => dispatch({type: DELETE_POST}))
 //     .catch(err => console.log(err))
 // }
