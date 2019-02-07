@@ -5,7 +5,8 @@ import {
     SIGN_OUT, 
     UPDATING, 
     UPDATE_POST,
-    GOT_POSTS
+    GOT_POSTS,
+    DELETE_POST
 } from '../actions'
 
 const initialState = {
@@ -72,6 +73,10 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 postUpdating: false,
+            }
+        case DELETE_POST: 
+            return {
+                ...state
             }
         default:
             return state

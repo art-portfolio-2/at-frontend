@@ -7,6 +7,7 @@ export const CREATE_POST = "CREATE_POST";
 export const UPDATING = "UPDATING";
 export const UPDATE_POST = "UPDATE_POST";
 export const GOT_POSTS = "GOT_POSTS";
+export const DELETE_POST = "DELETE_POST";
 
 // /api/users/posts/:id
 
@@ -74,4 +75,17 @@ export const updatePost = (post, id) => dispatch => {
     .catch(err => console.log(err))
 }
 
+export const deletePost = (postId) => dispatch => {
+    console.log(postId)
+    const token = localStorage.getItem('token')
+    const request = { 
+        headers: { 
+            authorization: token
+         }
+     }
+    axios
+    .delete(`https://backend-art.herokuapp.com/api/posts/${postId}`, request)
+    .then(res => dispatch({type: DELETE_POST}))
+    .catch(err => console.log(err))
+}
 

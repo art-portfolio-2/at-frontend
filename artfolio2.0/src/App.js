@@ -8,7 +8,6 @@ import CreateAccount from './components/auth/CreateAccount';
 import Posts from './components/posts/Posts';
 import CreatePost from './components/artist/CreatePost';
 import Landing from './components/layout/Landing';
-import UpdatePost from './components/artist/UpdatePost'
 
 class App extends Component {
   render() {

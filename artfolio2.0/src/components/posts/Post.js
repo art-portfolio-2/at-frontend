@@ -18,7 +18,7 @@ class Post extends Component {
                       <span>By {this.props.user.username}</span>
                       <blockquote>{this.props.post.description}</blockquote>
                       <button onClick={(e) => this.props.updating(e, this.props.post)} className="waves-effect waves-light btn #00695c teal darken-1">Update Post</button>
-                      <button className="waves-effect waves-light btn #00695c teal darken-1"> <i className="material-icons">delete</i></button>
+                      <button onClick={(e) => this.props.deletePost(e, this.props.post.id)} className="waves-effect waves-light btn #00695c teal darken-1"> <i className="material-icons">delete</i></button>
                     </div>
                 </div>
             </div>
