@@ -37,9 +37,8 @@ class CreatePost extends Component {
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
+                            <label className="add-info">Image Url</label>
                             <input type="text" onChange={this.handleChanges} value={this.state.imageUrl} name="imageUrl" className="materialize-textarea"></input>
-                            <label>Image Url</label>
-
                         </div>
                     </div>
                     <div className="row">
@@ -48,8 +47,8 @@ class CreatePost extends Component {
                             <textarea onChange={this.handleChanges} value={this.state.description} name="description" className="description-textarea"></textarea>
                         </div>
                     </div>
-                    { this.props.postUpdating ? <button className="waves-effect waves-light btn #00695c teal darken-3">Update Post</button> 
-                    : <button className="waves-effect waves-light btn #00695c teal darken-3">Create Post</button>}
+                    { this.props.postUpdating ? <button className="update-btn">Update Post</button> 
+                    : <button className="create-post-btn">Create Post</button>}
                 </form>
             </div>
         )
