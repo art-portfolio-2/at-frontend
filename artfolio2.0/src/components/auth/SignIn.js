@@ -29,14 +29,14 @@ class SignIn extends Component {
       <form onSubmit={this.signIn} className="sign-in-card" >
         <div className="row">
             <div className="input-field col s12">
-              <input onChange={this.handleChanges} value={this.state.username} name="username" type="text" className="validate"/>
               <label className="signin-text">Username</label>
+              <input onChange={this.handleChanges} value={this.state.username} name="username" type="text" className="validate"/>
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <input onChange={this.handleChanges} value={this.state.password} name="password" type="password" className="validate"/>
               <label className="signin-text">Password</label>
+              <input onChange={this.handleChanges} value={this.state.password} name="password" type="password" className="validate"/>
             </div>
         </div>
           <button className="card-btn-signin">Sign In</button>
