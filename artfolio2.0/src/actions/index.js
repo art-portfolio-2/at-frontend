@@ -7,6 +7,7 @@ export const CREATE_POST = "CREATE_POST";
 export const UPDATING = "UPDATING";
 export const UPDATE_POST = "UPDATE_POST";
 export const GOT_POSTS = "GOT_POSTS";
+export const DELETE_POST = "DELETE_POST";
 
 // /api/users/posts/:id
 
@@ -41,8 +42,8 @@ export const createAccount = accountInfo => dispatch => {
 }
 
 export const createPost = post => dispatch => {
-    var token = localStorage.getItem('token')
-    var request = { 
+    const token = localStorage.getItem('token')
+    const request = { 
         headers: { 
             authorization: token
          }
@@ -53,17 +54,38 @@ export const createPost = post => dispatch => {
     .catch(err => console.log(err))
 }
 
-export const updating = formId => {
+export const updating = post => {
     return {
         type: UPDATING,
-        payload: formId
-    }
-}
-export const updatePost = post => {
-    return {
-        type: UPDATE_POST,
         payload: post
     }
 }
 
+export const updatePost = (post, id) => dispatch => {
+    console.log(post, id)
+    const token = localStorage.getItem('token')
+    const request = { 
+        headers: { 
+            authorization: token
+         }
+     }
+    axios
+    .put(`https://backend-art.herokuapp.com/api/posts/${id}`, post, request)
+    .then(res => dispatch({type: UPDATE_POST}))
+    .catch(err => console.log(err))
+}
+
+export const deletePost = (postId) => dispatch => {
+    console.log(postId)
+    const token = localStorage.getItem('token')
+    const request = { 
+        headers: { 
+            authorization: token
+         }
+     }
+    axios
+    .delete(`https://backend-art.herokuapp.com/api/posts/${postId}`, request)
+    .then(res => dispatch({type: DELETE_POST}))
+    .catch(err => console.log(err))
+}
 
