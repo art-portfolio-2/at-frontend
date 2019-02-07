@@ -10,11 +10,11 @@ class Landing extends Component {
       this.props.history.push(`/user/${this.props.username}`);
     }
     return (
-      <div className="container card" style={{margin:"40px auto", padding:"60px"}}>
-        <h1>Welcome!</h1>
-        <p>Show your art to the world!</p>
-        <Link to="/signin" ><button className="waves-effect waves-light btn #00695c teal darken-3">Sign In</button></Link>
-        <Link to="/createaccount" ><button className="waves-effect waves-light btn #00695c teal darken-3">Create Account</button></Link>
+      <div className="container-card">
+        <h1 className="welcome">Welcome!</h1>
+        <p className="welcome-description">Show your art to the world!</p>
+        <Link to="/signin" ><button className="card-btn">Sign In</button></Link>
+        <Link to="/createaccount" ><button className="card-btn-2">Create Account</button></Link>
       </div>
     )
   }

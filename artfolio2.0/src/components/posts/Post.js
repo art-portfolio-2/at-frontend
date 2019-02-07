@@ -8,12 +8,16 @@ class Post extends Component {
     return (
       <div>
         <div className="row">
+
             <div className="col s12">
                 <div className="card large" style={{height:"500px"}}>
                     <div className="card-image">
                       <img alt="art photo" src={this.props.post.imageUrl} />
                       <span className="card-title">{this.props.post.postName}</span>
+
                     </div>
+                    <div className="post-content">
+                    <span className="card-title">{this.props.post.title}</span>
                     <div className="card-content">
                       <span>By {this.props.user.username}</span>
                       <blockquote>{this.props.post.description}</blockquote>
@@ -23,6 +27,7 @@ class Post extends Component {
                 </div>
             </div>
         </div>        
+      </div>
       </div>
     )
   }

@@ -27,10 +27,12 @@ class CreatePost extends Component {
 
     render() {
         return (
-            <div className="row container card" style={{margin:"40px auto", padding:"60px"}}>
+            <div className="dashboard-card">
                 <form onSubmit={this.createPost} className="col s12">
                     <div className="row">
+                        <label className="add-info">Title</label>
                         <div className="input-field col s12">
+
                         <textarea onChange={this.handleChanges} value={this.state.postName} name="postName" className="materialize-textarea"></textarea>
                         <label>Post Name</label>
                         </div>
@@ -39,16 +41,24 @@ class CreatePost extends Component {
                         <div className="input-field col s12">
                             <textarea onChange={this.handleChanges} value={this.state.imageUrl} name="imageUrl" className="materialize-textarea"></textarea>
                             <label>Image Url</label>
+
                         </div>
                     </div>
                     <div className="row">
-                        <div className="input-field col s12">
-                            <textarea onChange={this.handleChanges} value={this.state.description} name="description" className="materialize-textarea"></textarea>
-                            <label>Desctiption</label>
+                        <div className="description">
+                            <label className="add-info">Description</label>
+                            <textarea onChange={this.handleChanges} value={this.state.description} name="description" className="description-textarea"></textarea>
                         </div>
                     </div>
+<<<<<<< HEAD
                     { this.props.postUpdating ? <button className="waves-effect waves-light btn #00695c teal darken-3">Update Post</button> 
                     : <button className="waves-effect waves-light btn #00695c teal darken-3">Create Post</button>}
+=======
+
+                  
+                    <button className="waves-effect waves-light btn #00695c teal darken-3">Create Post</button>
+
+>>>>>>> 282276d3fbf6d845b7bdc44913ff428c3403e21f
                 </form>
             </div>
         )

@@ -8,9 +8,11 @@ class Nav extends Component {
   render() {
     return (
          <nav>
+
             <div className="nav-wrapper #00695c teal darken-3">
             <Link to="/" className="brand-logo left">ArtFolio2.0</Link>
             {this.props.signedIn ? <UserLinks user={this.props.user} /> : <SignedOutLinks />}
+
             </div>
         </nav>
     )
