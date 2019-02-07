@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { signIn } from '../../actions'
+import { signIn } from '../../actions';
+
 
 class SignIn extends Component {
 
@@ -15,7 +16,6 @@ class SignIn extends Component {
     this.props.signIn(this.state);
   }
 
-
   handleChanges = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -23,8 +23,10 @@ class SignIn extends Component {
   }
 
   render() {
+    
     return (
-      <form onSubmit={this.signIn} className="sign-in-card">
+
+      <form onSubmit={this.signIn} className="sign-in-card" >
         <div className="row">
             <div className="input-field col s12">
               <input onChange={this.handleChanges} value={this.state.username} name="username" type="text" className="validate"/>
