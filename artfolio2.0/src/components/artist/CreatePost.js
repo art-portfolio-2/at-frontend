@@ -30,16 +30,14 @@ class CreatePost extends Component {
             <div className="dashboard-card">
                 <form onSubmit={this.createPost} className="col s12">
                     <div className="row">
-                        <label className="add-info">Title</label>
+                        <label className="add-info">Post Name</label>
                         <div className="input-field col s12">
-
-                        <textarea onChange={this.handleChanges} value={this.state.postName} name="postName" className="materialize-textarea"></textarea>
-                        <label>Post Name</label>
+                        <input type="text" onChange={this.handleChanges} value={this.state.postName} name="postName" className="materialize-textarea"></input>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <textarea onChange={this.handleChanges} value={this.state.imageUrl} name="imageUrl" className="materialize-textarea"></textarea>
+                            <input type="text" onChange={this.handleChanges} value={this.state.imageUrl} name="imageUrl" className="materialize-textarea"></input>
                             <label>Image Url</label>
 
                         </div>

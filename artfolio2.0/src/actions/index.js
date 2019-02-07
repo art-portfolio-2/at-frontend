@@ -89,3 +89,16 @@ export const deletePost = (postId) => dispatch => {
     .catch(err => console.log(err))
 }
 
+// export const deletePost = (postId) => dispatch => {
+//     const request = { 
+//         headers: { 
+//             authorization: localStorage.getItem("token"),
+//             admin: "hunter2"
+//          }
+//      }
+//     axios
+//     .delete(`https://backend-art.herokuapp.com/api/posts/${postId}`, request)
+//     .then(res => dispatch({type: DELETE_POST}))
+//     .catch(err => console.log(err))
+// }
+

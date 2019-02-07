@@ -501,10 +501,10 @@ code {
 /* POSTS CONTAINER */
 
 .container {
-  width: 90%;
+  width: 75%;
   margin: 100px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   grid-gap: 20px;
 }
 
@@ -669,3 +669,33 @@ textarea.description-textarea {
   background-color: #202ef8;
 }
 
+/* .post {
+  border: 1px solid lightgrey;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.photo {
+  width: 100%;
+}
+
+.blue-button {
+  display: flex;
+  background-color: blue;
+  color: white;
+  list-style-type: none;
+  padding-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.validate {
+  padding: 0;
+} */
