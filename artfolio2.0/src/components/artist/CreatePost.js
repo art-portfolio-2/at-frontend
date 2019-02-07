@@ -50,15 +50,8 @@ class CreatePost extends Component {
                             <textarea onChange={this.handleChanges} value={this.state.description} name="description" className="description-textarea"></textarea>
                         </div>
                     </div>
-<<<<<<< HEAD
                     { this.props.postUpdating ? <button className="waves-effect waves-light btn #00695c teal darken-3">Update Post</button> 
                     : <button className="waves-effect waves-light btn #00695c teal darken-3">Create Post</button>}
-=======
-
-                  
-                    <button className="waves-effect waves-light btn #00695c teal darken-3">Create Post</button>
-
->>>>>>> 282276d3fbf6d845b7bdc44913ff428c3403e21f
                 </form>
             </div>
         )
