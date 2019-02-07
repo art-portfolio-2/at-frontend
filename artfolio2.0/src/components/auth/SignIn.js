@@ -23,9 +23,8 @@ class SignIn extends Component {
   }
 
   render() {
-    
-    return (
 
+    return (
       <form onSubmit={this.signIn} className="sign-in-card" >
         <div className="row">
             <div className="input-field col s12">
