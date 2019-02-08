@@ -6,7 +6,7 @@ import Nav from './components/layout/Nav'
 import SignIn from './components/auth/SignIn';
 import CreateAccount from './components/auth/CreateAccount';
 import Posts from './components/posts/Posts';
-import CreatePost from './components/artist/CreatePost';
+import CreatePost from './components/posts/CreatePost';
 import Landing from './components/layout/Landing';
 
 class App extends Component {

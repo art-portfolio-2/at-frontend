@@ -6,7 +6,7 @@ class CreatePost extends Component {
     state = {
        postName: this.props.postUpdating ? this.props.postChanging.postName : '',
        imageUrl: this.props.postUpdating ? this.props.postChanging.imageUrl : '',
-       description: this.props.postUpdating ? this.props.postChanging.description : ''
+       description: this.props.postUpdating ? this.props.postChanging.description : '',
     }
 
     createPost = e => {
@@ -60,6 +60,5 @@ const mapStateToProps = state => ({
     postChanging: state.postChanging,
     postUpdating: state.postUpdating,
 })
-
 
 export default connect(mapStateToProps, { createPost, updatePost })(CreatePost)
